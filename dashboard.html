@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoTransfer | Mi Dashboard</title>
+    <link rel="shortcut icon" href="ICONs/Moto48x48.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MotoTransfer</a>
+            <div class="d-flex align-items-center">
+                <span class="nav-greeting me-3 text-end">
+                    Hola, <b id="txtNombreHeader">Usuario</b> <br>
+                    <small class="text-muted">Cta: <span id="txtMiCuenta"></span></small>
+                </span>
+                
+                <div class="profile-trigger-circle me-2" onclick="abrirModal('modalPerfil')" title="Mi Perfil">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <button id="btnCerrarSesion" class="btn-logout" title="Salir">
+                    <i class="bi bi-box-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4 mb-5">
+        <div class="dashboard-header mb-4">
+            <h2>Resumen de tu cuenta</h2>
+            <p class="text-muted">Balance total disponible (Débito + Corriente)</p>
+            <h1 class="total-balance" id="txtSaldoTotal">$0.00</h1>
+            
+            <div class="d-flex gap-2 mt-3">
+                <button class="btn-action px-4" onclick="abrirModal('modalConsignar')"><i class="bi bi-cash"></i> Consignar (Simular)</button>
+                <button class="btn-action px-4" style="background-color: #D4A336;" onclick="abrirModal('modalTransferir')"><i class="bi bi-send"></i> Transferir</button>
+                <button class="btn-action-outline px-4" onclick="abrirModal('modalConfig')"><i class="bi bi-gear"></i> Config.</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-5 mb-4">
+                <div class="section-title mb-3"><h4>Mis Productos</h4></div>
+                <div id="contenedorTarjetas" class="d-flex flex-column gap-3"></div>
+                <div class="mt-4 d-flex gap-2">
+                    <button id="btnPedirCredito" class="btn-action-outline w-100"><i class="bi bi-credit-card"></i> Pedir Crédito</button>
+                    <button id="btnPedirCorriente" class="btn-action-outline w-100"><i class="bi bi-journal-check"></i> Pedir C. Corriente</button>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="history-card">
+                    <h4 class="mb-3">Últimos Movimientos</h4>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead><tr><th>Fecha</th><th>Detalle</th><th>Método</th><th class="text-end">Valor</th></tr></thead>
+                            <tbody id="listaMovimientos"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPerfil" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body p-4 text-center">
+                    <div class="profile-avatar-setup mb-3">
+                        <i class="bi bi-person-fill"></i>
+                    </div>
+                    <h5>Gestionar Mi Perfil</h5>
+                    <div class="text-start">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" id="perfilNombre" class="form-control mb-2">
+                        <label class="form-label">Apellido</label>
+                        <input type="text" id="perfilApellido" class="form-control mb-2">
+                        <label class="form-label">Nueva Contraseña</label>
+                        <input type="password" id="perfilPass" class="form-control mb-3" placeholder="Opcional">
+                        <button class="btn-action w-100" id="btnActualizarPerfil">Actualizar Datos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalConsignar" tabindex="-1">
+        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
+            <h5>Ingresar Dinero</h5>
+            <input type="number" id="montoConsignar" class="form-control mb-3" placeholder="Monto">
+            <button class="btn-action w-100" id="btnProcesarConsignacion">Consignar</button>
+        </div></div></div>
+    </div>
+
+    <div class="modal fade" id="modalTransferir" tabindex="-1">
+        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
+            <h5>Transferencia Directa</h5>
+            <input type="text" id="cuentaDestino" class="form-control mb-2" placeholder="Cta Destino">
+            <input type="number" id="montoTransferir" class="form-control mb-3" placeholder="Valor">
+            <button class="btn-action w-100" id="btnProcesarTransferencia">Enviar</button>
+        </div></div></div>
+    </div>
+
+    <div class="modal fade" id="modalCredito" tabindex="-1">
+        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
+                <h5>Crédito MotoTransfer</h5>
+                    <p>Deuda: <b id="txtDeudaActual" class="text-danger"></b></p>
+                <input type="number" id="montoCompra" class="form-control mb-2" placeholder="Valor Compra">
+                <input type="number" id="cuotasCompra" class="form-control mb-3" placeholder="Cuotas">
+                    <button class="btn-action w-100 mb-4" id="btnProcesarCompra">Comprar</button>
+                <hr>
+                <input type="number" id="montoAbono" class="form-control mb-2" placeholder="Valor Abono">
+                    <button class="btn-action-outline w-100 mb-2" id="btnPagarDeuda">Pagar con Débito</button>
+                    <button class="btn btn-link text-danger w-100 btn-sm" id="btnCancelarCredito">Cancelar Tarjeta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalConfig" tabindex="-1">
+        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
+            <h5>Configuración Interés</h5>
+            <input type="number" id="inputInteres" class="form-control mb-3" placeholder="Tasa %">
+            <button class="btn-action w-100" id="btnGuardarInteres">Guardar</button>
+        </div></div></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/dashboard.js"></script>
+</body>
+</html>
