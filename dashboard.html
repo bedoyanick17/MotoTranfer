@@ -15,23 +15,8 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">MotoTransfer</a>
             <div class="d-flex align-items-center">
-<<<<<<< HEAD
                 <span class="nav-greeting me-3">Hola, <b id="txtNombreHeader">Usuario</b> <br><small class="text-muted">Cta: <span id="txtMiCuenta"></span></small></span>
                 <button id="btnCerrarSesion" class="btn-logout"><i class="bi bi-box-arrow-right"></i> Salir</button>
-=======
-                <span class="nav-greeting me-3 text-end">
-                    Hola, <b id="txtNombreHeader">Usuario</b> <br>
-                    <small class="text-muted">Cta: <span id="txtMiCuenta"></span></small>
-                </span>
-                
-                <div class="profile-trigger-circle me-2" onclick="abrirModal('modalPerfil')" title="Mi Perfil">
-                    <i class="bi bi-person-fill"></i>
-                </div>
-
-                <button id="btnCerrarSesion" class="btn-logout" title="Salir">
-                    <i class="bi bi-box-arrow-right"></i>
-                </button>
->>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
             </div>
         </div>
     </nav>
@@ -43,15 +28,9 @@
             <h1 class="total-balance" id="txtSaldoTotal">$0.00</h1>
             
             <div class="d-flex gap-2 mt-3">
-<<<<<<< HEAD
                 <button class="btn btn-success" onclick="abrirModal('modalConsignar')"><i class="bi bi-cash"></i> Consignar (Simular)</button>
                 <button class="btn btn-primary" onclick="abrirModal('modalTransferir')"><i class="bi bi-send"></i> Transferir</button>
                 <button class="btn btn-warning" onclick="abrirModal('modalConfig')"><i class="bi bi-gear"></i> Config. Banco</button>
-=======
-                <button class="btn-action px-4" onclick="abrirModal('modalConsignar')"><i class="bi bi-cash"></i> Consignar (Simular)</button>
-                <button class="btn-action px-4" style="background-color: #D4A336;" onclick="abrirModal('modalTransferir')"><i class="bi bi-send"></i> Transferir</button>
-                <button class="btn-action-outline px-4" onclick="abrirModal('modalConfig')"><i class="bi bi-gear"></i> Config.</button>
->>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
             </div>
         </div>
 
@@ -79,63 +58,24 @@
         </div>
     </div>
 
-<<<<<<< HEAD
     <div class="modal fade" id="modalConsignar" tabindex="-1">
         <div class="modal-dialog"><div class="modal-content"><div class="modal-body">
             <h5>Simular Ingreso de Dinero</h5>
             <input type="number" id="montoConsignar" class="form-control mb-2" placeholder="Monto a consignar">
             <button class="btn btn-success w-100" id="btnProcesarConsignacion">Consignar a Débito</button>
-=======
-    <div class="modal fade" id="modalPerfil" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body p-4 text-center">
-                    <div class="profile-avatar-setup mb-3">
-                        <i class="bi bi-person-fill"></i>
-                    </div>
-                    <h5>Gestionar Mi Perfil</h5>
-                    <div class="text-start">
-                        <label class="form-label">Nombre</label>
-                        <input type="text" id="perfilNombre" class="form-control mb-2">
-                        <label class="form-label">Apellido</label>
-                        <input type="text" id="perfilApellido" class="form-control mb-2">
-                        <label class="form-label">Nueva Contraseña</label>
-                        <input type="password" id="perfilPass" class="form-control mb-3" placeholder="Opcional">
-                        <button class="btn-action w-100" id="btnActualizarPerfil">Actualizar Datos</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalConsignar" tabindex="-1">
-        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
-            <h5>Ingresar Dinero</h5>
-            <input type="number" id="montoConsignar" class="form-control mb-3" placeholder="Monto">
-            <button class="btn-action w-100" id="btnProcesarConsignacion">Consignar</button>
->>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
         </div></div></div>
     </div>
 
     <div class="modal fade" id="modalTransferir" tabindex="-1">
-<<<<<<< HEAD
         <div class="modal-dialog"><div class="modal-content"><div class="modal-body">
             <h5>Transferir a otra cuenta MotoTransfer</h5>
             <input type="text" id="cuentaDestino" class="form-control mb-2" placeholder="Número de cuenta destino">
             <input type="number" id="montoTransferir" class="form-control mb-2" placeholder="Monto a enviar">
             <button class="btn btn-primary w-100" id="btnProcesarTransferencia">Enviar Dinero</button>
-=======
-        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
-            <h5>Transferencia Directa</h5>
-            <input type="text" id="cuentaDestino" class="form-control mb-2" placeholder="Cta Destino">
-            <input type="number" id="montoTransferir" class="form-control mb-3" placeholder="Valor">
-            <button class="btn-action w-100" id="btnProcesarTransferencia">Enviar</button>
->>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
         </div></div></div>
     </div>
 
     <div class="modal fade" id="modalCredito" tabindex="-1">
-<<<<<<< HEAD
         <div class="modal-dialog"><div class="modal-content"><div class="modal-body">
             <h5>Gestión de Tarjeta de Crédito</h5>
             <p class="text-danger">Deuda actual: <b id="txtDeudaActual">$0</b></p>
@@ -158,33 +98,10 @@
             <label>Tasa de interés mensual (Ej: 3 para 3%)</label>
             <input type="number" id="inputInteres" class="form-control mb-2" placeholder="Porcentaje">
             <button class="btn btn-warning w-100" id="btnGuardarInteres">Guardar Tasa</button>
-=======
-        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
-                <h5>Crédito MotoTransfer</h5>
-                    <p>Deuda: <b id="txtDeudaActual" class="text-danger"></b></p>
-                <input type="number" id="montoCompra" class="form-control mb-2" placeholder="Valor Compra">
-                <input type="number" id="cuotasCompra" class="form-control mb-3" placeholder="Cuotas">
-                    <button class="btn-action w-100 mb-4" id="btnProcesarCompra">Comprar</button>
-                <hr>
-                <input type="number" id="montoAbono" class="form-control mb-2" placeholder="Valor Abono">
-                    <button class="btn-action-outline w-100 mb-2" id="btnPagarDeuda">Pagar con Débito</button>
-                    <button class="btn btn-link text-danger w-100 btn-sm" id="btnCancelarCredito">Cancelar Tarjeta</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalConfig" tabindex="-1">
-        <div class="modal-dialog"><div class="modal-content"><div class="modal-body p-4">
-            <h5>Configuración Interés</h5>
-            <input type="number" id="inputInteres" class="form-control mb-3" placeholder="Tasa %">
-            <button class="btn-action w-100" id="btnGuardarInteres">Guardar</button>
->>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
         </div></div></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<<<<<<< HEAD
     
     <!--
         ORDEN JAVASCRIPT
@@ -194,8 +111,5 @@
     <script src="JS/transferencias.js"></script>
     <script src="JS/tarjeta_credito.js"></script>
     <script src="JS/cuentacorriente.js"></script>
-=======
-    <script src="JS/dashboard.js"></script>
->>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 </body>
 </html>
