@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+:root {
+    --color-fondo: #FCF8EE;
+    --color-naranja: #E86A17;
+    --color-naranja-hover: #c95912;
+    --color-dorado: #D4A336;
+    --color-oscuro: #3D2616;
+    --color-blanco: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-oscuro);
+    overflow-x: hidden;
+}
+
+.text-dark-custom { color: var(--color-oscuro) !important; }
+.text-orange { color: var(--color-naranja) !important; }
+
+.navbar {
+    background-color: var(--color-blanco) !important;
+    border-bottom: 2px solid var(--color-dorado);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+
+.nav-link {
+    color: var(--color-oscuro) !important;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-naranja) !important;
+}
+
+.btn-primary-custom {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    border: 2px solid var(--color-naranja);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--color-naranja-hover);
+    border-color: var(--color-naranja-hover);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(232, 106, 23, 0.3);
+}
+
+.btn-outline-primary-custom {
+    background-color: transparent;
+    color: var(--color-naranja);
+    border: 2px solid var(--color-naranja);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary-custom:hover {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--color-fondo) 60%, #fff 100%);
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.badge-custom {
+    background-color: rgba(212, 163, 54, 0.2);
+    color: var(--color-dorado);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.hero-text h1 {
+    color: var(--color-oscuro);
+    line-height: 1.2;
+}
+
+.hero-image-placeholder {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-card {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: var(--color-blanco);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-naranja);
+    box-shadow: 0 15px 35px rgba(61, 38, 22, 0.1);
+    animation: float 4s ease-in-out infinite;
+}
+
+.card-1 { top: 10%; left: 20%; animation-delay: 0s; color: var(--color-dorado); }
+.card-2 { top: 40%; right: 10%; animation-delay: 1s; width: 100px; height: 100px; font-size: 3rem; background: var(--color-oscuro); color: var(--color-fondo);}
+.card-3 { bottom: 10%; left: 30%; animation-delay: 2s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.feature-card {
+    background: var(--color-fondo);
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(212, 163, 54, 0.2);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    background: var(--color-blanco);
+    border-color: var(--color-dorado);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(232, 106, 23, 0.1);
+    color: var(--color-naranja);
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .icon-wrapper {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--color-naranja) 0%, var(--color-oscuro) 100%);
+    padding: 80px 0;
+}
+
+.footer {
+    background-color: var(--color-blanco);
+    border-top: 1px solid #eee;
+}
+
+.social-links a {
+    color: var(--color-oscuro);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-naranja);
+}

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    background-color: #FCF8EE;
+    font-family: 'Montserrat', sans-serif;
+    color: #3D2616;
+}
+
+/* Navbar (Heredado de tu diseño) */
+.navbar.bg-body-tertiary {
+    background-color: #ffffff !important;
+    border-bottom: 3px solid #D4A336;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+.navbar-brand {
+    color: #E86A17 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+.nav-greeting { font-weight: 600; color: #3D2616; }
+
+/* Botones */
+.btn-logout {
+    background-color: transparent;
+    border: 2px solid #E86A17;
+    color: #E86A17;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-logout:hover {
+    background-color: #E86A17;
+    color: white;
+}
+
+.btn-action {
+    background-color: #E86A17;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-action:hover {
+    background-color: #D4A336;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(212, 163, 54, 0.3);
+}
+
+.btn-action-outline {
+    background-color: white;
+    border: 2px solid #D4A336;
+    color: #3D2616;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.btn-action-outline:hover {
+    background-color: #D4A336;
+    color: white;
+}
+
+/* Textos */
+.total-balance {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #E86A17;
+    letter-spacing: -1px;
+}
+
+/* ====================================
+   DISEÑO DE LAS TARJETAS BANCARIAS
+==================================== */
+.banco-card {
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.banco-card:hover {
+    transform: translateY(-5px);
+}
+
+/* El chip de la tarjeta */
+.banco-card::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(135deg, #d4af37, #ffd700);
+    border-radius: 6px;
+    opacity: 0.8;
+}
+
+/* Tipos de Tarjeta */
+.card-debito {
+    background: linear-gradient(135deg, #E86A17, #f78d4a);
+}
+.card-credito {
+    background: linear-gradient(135deg, #3D2616, #1a1a1a);
+}
+.card-corriente {
+    background: #ffffff;
+    border: 2px dashed #D4A336;
+    color: #3D2616;
+}
+.card-corriente::before {
+    display: none; /* La cuenta corriente no lleva chip físico */
+}
+
+/* Textos dentro de la tarjeta */
+.card-type {
+    text-align: right;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.card-number {
+    font-family: 'Courier New', Courier, monospace; /* Fuente de números de tarjeta */
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.card-balance {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Historial */
+.history-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(61, 38, 22, 0.05);
+}
+.table th { color: #D4A336; font-weight: 600; border-bottom: 2px solid #FCF8EE; }
+.table td { color: #3D2616; vertical-align: middle; border-bottom: 1px solid #f0f0f0; }
+.badge-metodo {
+    background-color: #FCF8EE;
+    color: #E86A17;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #EAD8B1;
+}
