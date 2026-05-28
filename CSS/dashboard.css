@@ -6,7 +6,11 @@ body {
     color: #3D2616;
 }
 
+<<<<<<< HEAD
 /* Navbar (Heredado de tu diseño) */
+=======
+/* Navbar */
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .navbar.bg-body-tertiary {
     background-color: #ffffff !important;
     border-bottom: 3px solid #D4A336;
@@ -19,15 +23,53 @@ body {
     text-transform: uppercase;
     margin-left: 20px;
 }
+<<<<<<< HEAD
 .nav-greeting { font-weight: 600; color: #3D2616; }
 
 /* Botones */
+=======
+.nav-greeting { font-weight: 600; color: #3D2616; line-height: 1.2; }
+
+
+.profile-trigger-circle {
+    width: 42px;
+    height: 42px;
+    background-color: #FCF8EE; /* Tu color crema */
+    border: 2px solid #D4A336; /* Tu color dorado/amarillo */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #3D2616; /* Tu color café */
+    font-size: 1.2rem;
+}
+
+.profile-trigger-circle:hover {
+    background-color: #D4A336;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .btn-logout {
     background-color: transparent;
     border: 2px solid #E86A17;
     color: #E86A17;
+<<<<<<< HEAD
     padding: 6px 15px;
     border-radius: 8px;
+=======
+    padding: 8px;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
     font-weight: 600;
     transition: all 0.3s ease;
 }
@@ -65,7 +107,11 @@ body {
     color: white;
 }
 
+<<<<<<< HEAD
 /* Textos */
+=======
+
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .total-balance {
     font-size: 3rem;
     font-weight: 700;
@@ -73,9 +119,13 @@ body {
     letter-spacing: -1px;
 }
 
+<<<<<<< HEAD
 /* ====================================
    DISEÑO DE LAS TARJETAS BANCARIAS
 ==================================== */
+=======
+
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .banco-card {
     border-radius: 16px;
     padding: 20px;
@@ -85,11 +135,16 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
+<<<<<<< HEAD
 .banco-card:hover {
     transform: translateY(-5px);
 }
 
 /* El chip de la tarjeta */
+=======
+.banco-card:hover { transform: translateY(-5px); }
+
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .banco-card::before {
     content: '';
     position: absolute;
@@ -102,6 +157,7 @@ body {
     opacity: 0.8;
 }
 
+<<<<<<< HEAD
 /* Tipos de Tarjeta */
 .card-debito {
     background: linear-gradient(135deg, #E86A17, #f78d4a);
@@ -109,11 +165,16 @@ body {
 .card-credito {
     background: linear-gradient(135deg, #3D2616, #1a1a1a);
 }
+=======
+.card-debito { background: linear-gradient(135deg, #E86A17, #f78d4a); }
+.card-credito { background: linear-gradient(135deg, #3D2616, #1a1a1a); }
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .card-corriente {
     background: #ffffff;
     border: 2px dashed #D4A336;
     color: #3D2616;
 }
+<<<<<<< HEAD
 .card-corriente::before {
     display: none; /* La cuenta corriente no lleva chip físico */
 }
@@ -147,14 +208,26 @@ body {
 }
 
 /* Historial */
+=======
+.card-corriente::before { display: none; }
+
+.card-type { text-align: right; font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; }
+.card-number { font-family: 'Courier New', Courier, monospace; font-size: 1.4rem; letter-spacing: 2px; margin-bottom: 15px; }
+.card-balance { font-size: 1.5rem; font-weight: bold; }
+
+
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .history-card {
     background: white;
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 10px 30px rgba(61, 38, 22, 0.05);
 }
+<<<<<<< HEAD
 .table th { color: #D4A336; font-weight: 600; border-bottom: 2px solid #FCF8EE; }
 .table td { color: #3D2616; vertical-align: middle; border-bottom: 1px solid #f0f0f0; }
+=======
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 .badge-metodo {
     background-color: #FCF8EE;
     color: #E86A17;
@@ -163,4 +236,34 @@ body {
     font-size: 0.8rem;
     font-weight: 600;
     border: 1px solid #EAD8B1;
+<<<<<<< HEAD
+=======
+}
+
+.modal-content { border-radius: 20px; border: none; }
+.form-label { font-size: 0.85rem; font-weight: 600; color: #8a735d; margin-bottom: 5px; }
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ead8b1;
+    padding: 10px 15px;
+    background-color: #fffdf9;
+}
+.form-control:focus {
+    border-color: #E86A17;
+    box-shadow: 0 0 0 3px rgba(232, 106, 23, 0.1);
+}
+
+.profile-avatar-setup {
+    width: 70px;
+    height: 70px;
+    background-color: #FCF8EE;
+    border: 2px solid #D4A336;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #D4A336;
+    margin: 0 auto;
+>>>>>>> 72218c3f4b4b2b1ce2e96951dd43e92c07ae6365
 }
