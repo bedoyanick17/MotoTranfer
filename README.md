@@ -1,4 +1,5 @@
 MotoTransfer - Sistema Bancario Digital
+
 Este proyecto es una aplicación web de gestión bancaria desarrollada como parte de los proyectos académicos institucionales para el CESDE. El sistema permite a los usuarios gestionar sus productos financieros, realizar transferencias y administrar créditos de forma intuitiva, aplicando principios de arquitectura de software y modularidad en JavaScript.
 
 🚀 Descripción del Proyecto
